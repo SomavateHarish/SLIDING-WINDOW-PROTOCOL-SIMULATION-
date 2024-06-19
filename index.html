@@ -1,0 +1,140 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="grids.css">
+</head>
+
+<body>
+    <div class="grid-container">
+
+      
+   
+    <div class="grid-item simulation" id = "simulation">
+        <div id="sender" class="sender">
+
+            <h2 class="title"> Sender </h2><br>
+
+            <div id="bw"> </div>
+
+            <div class="window" id="swindow" >
+      
+            </div>
+
+            <div id="aw"> </div>
+
+        </div>
+
+        <div>
+                
+        </div>
+
+
+        <div id="receiver" class="receiver">
+
+
+            <h2 class="title"> Receiver </h2><br>
+            <div id="srec" class="window">
+
+            </div>
+
+        </div>
+    </div>
+
+    <div>
+
+        <button id="send" onclick="sendPacket()" class="button"> Send Packet</button>
+        <br><br>
+        <button onclick="pauseSimulation()" id="pauseID" class="button"> Pause Simulation</button><br>
+        <button id="resume" onclick="resumeSimulation()" id="resumeID" style="display: none;" class="button">Resume Simulation</button>
+        <br>
+        <button id="killpac" onclick="packetKill()" class="button">Kill Packet</button>
+        <br><br>
+        <button onclick="packetAdd()" class="button">Add Packet</button>
+        <br><br>
+        <button id="autosend" onclick="automateSend();" class="button">AutoSend</button>
+        <button id="reload" onclick="location.reload()" class="button" > Reset </button>
+        <button id="startButton">Start Recognition</button>
+    <button id="stopButton">Stop Recognition</button>
+    <p id="output"></p>
+    
+</div>
+
+    <h1>Voice-Controlled </h1>
+
+    
+
+    <script>
+      const recognition = new webkitSpeechRecognition(); // For Chrome
+      recognition.continuous = true;
+
+      const commands = {
+        "click start": () =>{ 
+            document.getElementById("startButton").click();
+            speekText("starting recognation");
+        },
+        "click stop": () =>{ 
+            document.getElementById("stopButton").click();
+            speekText("stoping recognation");
+        },
+        "send packet": () =>{
+             document.getElementById("send").click();
+             speekText("sending packet");
+        }, 
+        "auto send packet": () => document.getElementById("autosend").click(),    
+        "pause": () => document.getElementById("pauseID").click(),
+        "resume simulation": () => document.getElementById("resume").click(),
+        "kill packet": () => document.getElementById("killpac").click(),
+        "reload simulation": () => document.getElementById("reload").click(),
+        
+      };
+
+      recognition.onresult = function (event) {
+        const result = event.results[event.results.length - 1][0].transcript;
+        document.getElementById("output").textContent = result;
+
+        for (const command in commands) {
+          if (result.includes(command)) {
+            commands[command]();
+          }
+        }
+      };
+
+      recognition.onerror = function (event) {
+        console.error("Speech recognition error: " + event.error);
+      };
+
+      function speekText(text){
+        const synth = window.speechSynthesis;
+        const utterance = new SpeechSynthesisUtterance(text);
+        synth.speak(utterance);
+      }
+      
+      recognition.start();
+      speekText("hello how are you doing")
+
+      document.getElementById("startButton").addEventListener("click", function () {
+        recognition.start();
+        //speekText("startig recognation");
+        //return commands;
+      });
+
+      document.getElementById("stopButton").addEventListener("click", function () {
+        recognition.stop();
+        //speekText("stoping recognation");
+        //return commands;
+      });
+ 
+    </script>
+
+<script src="main.js">
+    </script>
+    <script src="events.js">
+    </script>
+<script src="SR.js">
+    
+</script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="grids.css">
+</head>
+
+<body>
+    <div class="grid-container">
+
+      
+   
+    <div class="grid-item simulation" id = "simulation">
+        <div id="sender" class="sender">
+
+            <h2 class="title"> Sender </h2><br>
+
+            <div id="bw"> </div>
+
+            <div class="window" id="swindow" >
+      
+            </div>
+
+            <div id="aw"> </div>
+
+        </div>
+
+        <div>
+                
+        </div>
+
+
+        <div id="receiver" class="receiver">
+
+
+            <h2 class="title"> Receiver </h2><br>
+            <div id="srec" class="windowgbn">
+
+            </div>
+
+        </div>
+    </div>
+
+    <div>
+
+        <button onclick="sendPacket()" class="button"> Send Packet</button>
+        <br><br>
+        <button onclick="pauseSimulation()" id="pauseID" class="button"> Pause Simulation</button><br>
+        <button onclick="resumeSimulation()" id="resumeID" style="display: none;" class="button">Resume Simulation</button>
+        <br>
+        <button onclick="packetKill()" class="button">Kill Packet</button>
+        <br><br>
+        <button onclick="packetAdd()" class="button">Add Packet</button>
+        <br><br>
+        <button onclick="automateSend();" class="button">AutoSend</button>
+        <button onclick="location.reload()" class="button" > Reset </button>
+</div>
+
+<script src="main.js">
+    </script>
+    <script src="events.js">
+    </script>
+
+
+</script>
+</body>
+
+</html>

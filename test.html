@@ -1,0 +1,186 @@
+<!--<!DOCTYPE html>
+ Design by foolishdeveloper.com 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    @import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+  background: #0868cf;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 450px;
+  height: 80px;
+  border-radius: 50px;
+}
+
+.wrapper ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.wrapper ul li {
+  width: 20%;
+  text-align: center;
+}
+
+.wrapper ul li a {
+  color: #0a50b9;
+  font-size: 24px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.wrapper ul li a:hover {
+  color: #4306a6;
+}
+
+.wrapper ul li .tooltip {
+  position: absolute;
+  top: -90px;
+  left: -45px;
+  background: #fff;
+  width: 115px;
+  padding: 10px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: #044b85;
+  font-weight: bold;
+  display: none;
+}
+
+.wrapper ul li a:hover .tooltip{
+   display: block;
+}
+
+.wrapper ul li .tooltip:before{
+  content: "";
+  position: absolute;
+  top: 33px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 10px solid #fff;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+  </style>
+</head>
+<body>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+<div class="wrapper">
+    <ul>
+        <li>
+          <a href="#"><i class="fas fa-home"></i>
+            <div class="tooltip">
+              home
+            </div>
+          </a>
+
+        </li>
+        <li><a href="#"><i class="fas fa-user"></i>
+          <div class="tooltip">
+              profile
+          </div>
+          </a>
+
+      </li>
+        <li><a href="#"><i class="fas fa-address-book"></i>
+          <div class="tooltip">
+              Contact
+          </div>
+          </a>
+
+      </li>
+        <li><a href="#"><i class="fas fa-map-marked"></i>
+           <div class="tooltip">
+              maps
+          </div>
+          </a>
+
+      </li>
+        <li><a href="#"><i class="fas fa-search"></i>
+          <div class="tooltip">
+             search
+          </div>
+          </a>
+
+      </li>
+    </ul>
+</div>
+</body>
+</html>-->
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Voice-Controlled Buttons</title>
+  </head>
+  <body>
+    <h1>Voice-Controlled Buttons</h1>
+
+    <button id="startButton">Start Recognition</button>
+    <button id="stopButton">Stop Recognition</button>
+    <p id="output"></p>
+
+    <script>
+      const recognition = new webkitSpeechRecognition(); // For Chrome
+      recognition.continuous = true;
+
+      const commands = {
+        "click start": () => document.getElementById("startButton").click(),
+        "click stop": () => document.getElementById("stopButton").click(),
+      };
+
+      recognition.onresult = function (event) {
+        const result = event.results[event.results.length - 1][0].transcript;
+        document.getElementById("output").textContent = result;
+
+        for (const command in commands) {
+          if (result.includes(command)) {
+            commands[command]();
+          }
+        }
+      };
+
+      recognition.onerror = function (event) {
+        console.error("Speech recognition error: " + event.error);
+      };
+
+      document.getElementById("startButton").addEventListener("click", function () {
+        recognition.start();
+      });
+
+      document.getElementById("stopButton").addEventListener("click", function () {
+        recognition.stop();
+      });
+    </script>
+  </body>
+</html>

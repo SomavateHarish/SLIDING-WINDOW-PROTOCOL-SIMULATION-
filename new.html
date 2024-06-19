@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="new.css">
+    <title>Document</title>
+    <style media="screen"> @import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+    </style>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <div class="nevbar" id="nevbar"> 
+
+       <div class="bar">
+       <!-- Navigation bar -->
+       <ul>
+        <li>
+          <a href="#nevbar"><i class="fas fa-home"></i>
+            <div class="tooltip">
+              home
+            </div>
+          </a>
+
+        </li>
+        <li><a href="#aboutus"><i class="fas fa-user"></i>
+          <div class="tooltip">
+              profile
+          </div>
+          </a>
+
+      </li>
+        <li><a href="#aboutus"><i class="fas fa-address-book"></i>
+          <div class="tooltip">
+              Contact
+          </div>
+          </a>
+
+      </li>
+        <li><a href="https://maps.app.goo.gl/CHfAThc2VYpeqTFh7"><i class="fas fa-map-marked"></i>
+           <div class="tooltip">
+              maps
+          </div>
+          </a>
+
+      </li>
+        <li><a href="#bigbox"><i class="fas fa-search"></i>
+          <div class="tooltip">
+             search
+          </div>
+          </a>
+
+      </li>
+      <li>
+        <button onclick="mode()" class="modebtn">mode</button>
+      </li>  
+    </ul>
+
+        </div> <p class="head">Sliding Window Protocol -<span class="typed-text"></span><span class="cursor">&nbsp;</span> </p> 
+    </div>
+    <div class="bigbox" id="bigbox">
+        
+        <div class="box">
+            <h1 class="title">Go Back N Sliding Window Protocol</h1>
+            <button class="tryit" onclick="document.location='indexgbn.html'">Try It</button>
+        </div>
+        <div class="box">
+            <h1 class="title">Selective Repeat Sliding Window Protocol</h1>
+            <button class="tryit" onclick="document.location='index.html'" >Try It</button>
+            
+        </div>
+            
+    </div>
+    <div class="down"><img class="down" src="scroll1.gif" alt="scroll"></div>
+
+
+<!--our team -->
+
+    <div class="aboutus" id="aboutus">
+        <div class="responsive-container-block outer-container">
+            <div class="responsive-container-block inner-container">
+              <p class="text-blk section-head-text">
+                Meet Our Expert Team
+              </p>
+              <p class="text-blk section-subhead-text">
+                Bharati Vidyapeeth Deemed University Department Of Engineering And Technology, Navi Mumbai
+              </p>
+              <div class="responsive-container-block">
+                <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+                  <div class="team-card">
+                    <div class="img-wrapper">
+                      <img class="team-img" src="km.png">
+                    </div>
+                    <p class="text-blk name">
+                      Dr.Kamal Mehta
+                    </p>
+                    <p class="text-blk position">
+                      Instructor
+                    </p>
+                    <div class="social-media-links">
+                      <a href="http://www.twitter.com/" target="_blank">
+                        <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                      </a>
+                      <a href="http://www.facebook.com/" target="_blank">
+                        <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+                      </a>
+                      <a href="http://www.instagram.com/" target="_blank">
+                        <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                      </a>
+                      <a href="http://www.gmail.com/" target="_blank">
+                        <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+                  <div class="team-card">
+                    <div class="img-wrapper">
+                      <img class="team-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert2.png">
+                    </div>
+                    <p class="text-blk name">
+                      Mayur Hiwale
+                    </p>
+                    <p class="text-blk position">
+                      Software Developer
+                    </p>
+                    <div class="social-media-links">
+                      <a href="http://www.twitter.com/" target="_blank">
+                        <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                      </a>
+                      <a href="http://www.facebook.com/" target="_blank">
+                        <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+                      </a>
+                      <a href="http://www.instagram.com/" target="_blank">
+                        <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                      </a>
+                      <a href="http://www.gmail.com/" target="_blank">
+                        <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+                  <div class="team-card">
+                    <div class="img-wrapper">
+                      <img class="team-img" src="harish1.png">
+                    </div>
+                    <p class="text-blk name">
+                      Harish Somavate
+                    </p>
+                    <p class="text-blk position">
+                        Software Developer
+                    </p>
+                    <div class="social-media-links">
+                      <a href="http://www.twitter.com/" target="_blank">
+                        <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                      </a>
+                      <a href="http://www.facebook.com/" target="_blank">
+                        <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+                      </a>
+                      <a href="http://www.instagram.com/" target="_blank">
+                        <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                      </a>
+                      <a href="http://www.somavateharish@gmail.com/" target="_blank">
+                        <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+                  <div class="team-card">
+                    <div class="img-wrapper">
+                      <img class="team-img" src="harshal1.png">
+                    </div>
+                    <p class="text-blk name">
+                      Harshal Somavate
+                    </p>
+                    <p class="text-blk position">
+                        Software Developer
+                    </p>
+                    <div class="social-media-links">
+                      <a href="http://www.twitter.com/" target="_blank">
+                        <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                      </a>
+                      <a href="http://www.facebook.com/" target="_blank">
+                        <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+                      </a>
+                      <a href="http://www.instagram.com/" target="_blank">
+                        <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                      </a>
+                      <a href="http://www.gmail.com/" target="_blank">
+                        <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+                    <div class="team-card">
+                      <div class="img-wrapper">
+                        <img class="team-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert2.png">
+                      </div>
+                      <p class="text-blk name">
+                        Yash Jagtap
+                      </p>
+                      <p class="text-blk position">
+                        Software Developer
+                      </p>
+                      <div class="social-media-links">
+                        <a href="http://www.twitter.com/" target="_blank">
+                          <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                        </a>
+                        <a href="http://www.facebook.com/" target="_blank">
+                          <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+                        </a>
+                        <a href="http://www.instagram.com/" target="_blank">
+                          <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                        </a>
+                        <a href="http://www.gmail.com/" target="_blank">
+                          <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+                    <div class="team-card">
+                      <div class="img-wrapper">
+                        <img class="team-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert2.png">
+                      </div>
+                      <p class="text-blk name">
+                        Nikhil Thakare
+                      </p>
+                      <p class="text-blk position">
+                        Software Developer
+                      </p>
+                      <div class="social-media-links">
+                        <a href="http://www.twitter.com/" target="_blank">
+                          <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                        </a>
+                        <a href="http://www.facebook.com/" target="_blank">
+                          <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+                        </a>
+                        <a href="http://www.instagram.com/" target="_blank">
+                          <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                        </a>
+                        <a href="http://www.gmail.com/" target="_blank">
+                          <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+                    <div class="team-card">
+                      <div class="img-wrapper">
+                        <img class="team-img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert2.png">
+                      </div>
+                      <p class="text-blk name">
+                        Someshwar Mishra
+                      </p>
+                      <p class="text-blk position">
+                        Software Developer
+                      </p>
+                      <div class="social-media-links">
+                        <a href="http://www.twitter.com/" target="_blank">
+                          <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                        </a>
+                        <a href="http://www.facebook.com/" target="_blank">
+                          <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+                        </a>
+                        <a href="http://www.instagram.com/" target="_blank">
+                          <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                        </a>
+                        <a href="http://www.gmail.com/" target="_blank">
+                          <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+<!--/* background animation */-->
+
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+</ul>
+
+    <script>
+        const typedTextSpan = document.querySelector(".typed-text");
+const cursorSpan = document.querySelector(".cursor");
+
+const textArray = [" Selective Repeat", " Go Back N", " Lossless", " Lossy"];
+const typingDelay = 200;
+const erasingDelay = 100;
+const newTextDelay = 2000; // Delay between current and next text
+let textArrayIndex = 0;
+let charIndex = 0;
+
+function type() {
+  if (charIndex < textArray[textArrayIndex].length) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+    setTimeout(erase, newTextDelay);
+  }
+}
+
+function erase() {
+  if (charIndex > 0) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+    textArrayIndex++;
+    if(textArrayIndex>=textArray.length) textArrayIndex=0;
+    setTimeout(type, typingDelay + 1100);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+  if(textArray.length) setTimeout(type, newTextDelay + 250);
+});
+
+
+function mode(){
+
+    var element = document.body;
+        element.classList.toggle("dark")
+}
+
+
+    </script>
+</body>
+</html>

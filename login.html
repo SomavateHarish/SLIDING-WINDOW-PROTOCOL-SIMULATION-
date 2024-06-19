@@ -1,0 +1,75 @@
+
+<div style="position: absolute; right:0px; left:90px;"> 
+<div id="login" style="display: none;">
+    <h2> Login </h2>
+    <input type="text" id="username"  placeholder="username"/> <br> <br>
+    <input type="password" id="pass"  placeholder="password" /><br> <br>
+    <button onclick="login()"> Sign Up</button> <br> 
+
+    <a href="#" onclick="togS()"> Create An Account</a>
+
+</div>
+
+<div id="signup"> 
+    <h2> Create Account </h2>
+    <input type="text" id="susername" placeholder="username"/> <br> <br>
+    <input type="text" id="name" placeholder="Name"/> <br> <br>
+    <input type="text" id="lastname" placeholder="Last Name"/> <br> <br>
+    <input type="password" id="spass" placeholder="Password" /> <br> <br>
+    <button onclick="signup()"> Sign Up</button> <br> <br>
+    <a href="#" onclick="togL()"> Login</a>
+
+</div>
+
+</div>
+
+<script>
+
+
+function togL() {
+    document.getElementById("login").style.display = "block";
+    document.getElementById("signup").style.display = "none";
+}
+
+function togS() {
+    document.getElementById("login").style.display = "none";
+    document.getElementById("signup").style.display = "block";
+}
+
+function signup() {
+    let name  = document.getElementById("name").value;
+    let username  = document.getElementById("susername").value;
+    let lastname  = document.getElementById("lastname").value;
+    let pass  = document.getElementById("spass").value;
+
+    if(!name.length || !username.length || !lastname.length || !pass.length) return alert("Bhak bhosdike");
+    
+    let user = localStorage.getItem(username.trim().toLowerCase());
+
+    if(user) return alert("Kisi aur ka username he be");
+
+    localStorage.setItem(username.trim().toLowerCase(), JSON.stringify({name : name, username : username, lastname : lastname, pass: pass}))
+
+    alert("Successfully created account, please login now")
+    togL();
+}
+
+
+function login() {
+
+    let username  = document.getElementById("username").value;
+    let pass  = document.getElementById("pass").value;
+
+    if( !username.length || !pass.length) return alert("Invalid entries");
+    
+    let user = localStorage.getItem(username.trim().toLowerCase());
+
+    if(!user) return alert("User not registered");
+
+
+    if(user && JSON.parse(user).pass == pass) return alert("Login Successful!")
+
+    alert("Password galat daalta he bhosdike")
+}
+
+</script>
